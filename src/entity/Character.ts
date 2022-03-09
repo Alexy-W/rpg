@@ -14,7 +14,7 @@ export class  Character {
   heal(character: Character) {
     if (character.alive === true) {
       character.HP >= 1000
-        ? console.log(`${character.name} deja sont maximum de vie`)
+        ? console.log(`${character.name} already at max HP`)
         : (character.HP += this.level);
     }
     return character;
@@ -26,8 +26,8 @@ export class  Character {
       if (character.HP <= 0) {
         character.die()
         this.level++;
-        console.log(`${character.name} est mort`);
-        console.log(`${this.name} est maintenant level ${this.level}`);
+        console.log(`${character.name} is dead`);
+        console.log(`${this.name} is now level ${this.level}`);
       } 
   }
  die() {
